@@ -5,26 +5,23 @@ public class SpawnerScript : MonoBehaviour {
 
 	public GameObject[] obj;
 	public float platformSize = 15.0f;
-	public float MAX_TIME = 15.0f;
-	private float time;
+	public float z = -5.0f;
 
 	// Use this for initialization
 	void Start () {
 		Spawn ();
-		time = MAX_TIME*2.0f;
 	}
 
 	void Spawn() {
-		Instantiate(obj[Random.Range(0,obj.Length)], transform.position, Quaternion.identity);
-		Instantiate(obj[Random.Range(0,obj.Length)], new Vector3(transform.position.x, transform.position.y, transform.position.z+platformSize), Quaternion.identity);
+		z += platformSize;
+		Instantiate(obj[Random.Range(0,obj.Length)], new Vector3(transform.position.x, transform.position.y, z), Quaternion.identity);
+		z += platformSize;
+		Instantiate(obj[Random.Range(0,obj.Length)], new Vector3(transform.position.x, transform.position.y, z), Quaternion.identity);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		time -= Time.deltaTime;
-		if (time <= 0.0f) {
+		if (transform.parent.gameObject.transform.position.z >= (z-platformSize))
 			Spawn ();
-			time = MAX_TIME;
-		}
 	}
 }
