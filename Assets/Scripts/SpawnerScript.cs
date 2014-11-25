@@ -14,9 +14,9 @@ public class SpawnerScript : MonoBehaviour {
 
 	void Spawn() {
 		z += platformSize;
-		Instantiate(obj[Random.Range(0,obj.Length)], new Vector3(transform.position.x, transform.position.y, z), Quaternion.identity);
+		Instantiate(obj[Random.Range(0,obj.Length)], new Vector3(transform.position.x, transform.position.y, z), obj[0].transform.rotation);
 		z += platformSize;
-		Instantiate(obj[Random.Range(0,obj.Length)], new Vector3(transform.position.x, transform.position.y, z), Quaternion.identity);
+		Instantiate(obj[Random.Range(0,obj.Length)], new Vector3(transform.position.x, transform.position.y, z), obj[0].transform.rotation);
 	}
 	
 	// Update is called once per frame
