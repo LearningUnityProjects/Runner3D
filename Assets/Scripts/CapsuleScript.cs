@@ -8,10 +8,8 @@ public class CapsuleScript : MonoBehaviour {
 	private int score;
 
 	void OnTriggerEnter(Collider other) {
-		Debug.Log("trigger Enter: " + score);
 		Destroy(gameObject);
 		++score;
-		Debug.Log("trigger Enter: " + scoreText.text + " real: "  + score);
 		scoreText.text = score.ToString();
 	}
 
