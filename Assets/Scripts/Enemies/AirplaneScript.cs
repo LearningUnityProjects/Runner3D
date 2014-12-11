@@ -19,5 +19,6 @@ public class AirplaneScript : MonoBehaviour {
 		GameObject expl = Instantiate(explosio, transform.position, Quaternion.identity) as GameObject;
 		Destroy(gameObject); 
 		Destroy(expl, 3);
+		col.gameObject.GetComponent<DiePlayerScript>().Die();
 	}
 }
