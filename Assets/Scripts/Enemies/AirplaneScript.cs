@@ -22,20 +22,22 @@ public class AirplaneScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 
-		Debug.Log ("HA PICAT AMB: " + col);
-		CharacterController controller = GetComponent<CharacterController>();
-		if (col.gameObject.name == "PACKPARET") {
-			//controller.transform.Rotate(new Vector3(0,180,0));
-			right = !right;
-		} else {
-			//			GameObject expl = Instantiate (explosio, transform.position, Quaternion.identity) as GameObject;
-			//			Destroy(gameObject); 
-			//			Destroy(expl, 3);
-			//			col.gameObject.GetComponent<DiePlayerScript>().Die();
-		}
+		Debug.Log ("HA PICAT AMB: " + col.gameObject.name);
+
 	}
 
 	void OnControllerColliderHit(ControllerColliderHit col) {
-
+		CharacterController controller = GetComponent<CharacterController>();
+		if (col.gameObject.name == "baseMale") {
+			//controller.transform.Rotate(new Vector3(0,180,0));
+			GameObject expl = Instantiate (explosio, transform.position, Quaternion.identity) as GameObject;
+			Destroy(gameObject); 
+			Destroy(expl, 3);
+			col.gameObject.GetComponent<DiePlayerScript>().Die();
+			
+		} else {
+			right = !right;
+			
+		}
 	}
 }
