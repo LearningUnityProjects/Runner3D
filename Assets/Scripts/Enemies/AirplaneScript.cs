@@ -19,12 +19,7 @@ public class AirplaneScript : MonoBehaviour {
 		else moveDirection = new Vector3(-1, 0,0);
 		controller.Move(moveDirection * Time.deltaTime * speed);
 	}
-
-	void OnTriggerEnter(Collider col){
-
-		Debug.Log ("HA PICAT AMB: " + col.gameObject.name);
-
-	}
+	
 
 	void OnControllerColliderHit(ControllerColliderHit col) {
 		CharacterController controller = GetComponent<CharacterController>();
