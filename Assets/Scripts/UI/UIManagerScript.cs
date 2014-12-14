@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class UIManagerScript : MonoBehaviour {
 
 	public InputField name;
+	public GameObject retryPanel;
+	public GameObject highScorePanel;
 
 	public void StartGame()
 	{
@@ -28,11 +30,12 @@ public class UIManagerScript : MonoBehaviour {
 
 	public void SaveScore()
 	{
-		Text scoreText = GameObject.Find("/Canvas/Panel/Score").GetComponent<Text>();
+		Text scoreText = GameObject.Find("/UI/Canvas/Panel/Score").GetComponent<Text>();
 		int score = int.Parse(scoreText.text);
 		Debug.Log ("input field " + name.value); 
-		gameObject.GetComponent<ScoreScript>().UpdateHighScore(score,name.value);
-		Application.LoadLevel (0);
+		gameObject.GetComponent<SaveScoreScript>().UpdateHighScore(score,name.value);
+		highScorePanel.SetActive(false);
+		retryPanel.SetActive(true);
 	}
 	// Use this for initialization
 	void Start () {

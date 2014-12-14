@@ -15,7 +15,7 @@ public class CapsuleScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		scoreText = GameObject.Find("/Canvas/Panel/Score").GetComponent<Text>();
+		scoreText = GameObject.Find("/UI/Canvas/Panel/Score").GetComponent<Text>();
 		Debug.Log("initial score: " + scoreText.text);
 	}
 

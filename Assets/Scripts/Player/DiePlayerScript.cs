@@ -9,7 +9,7 @@ public class DiePlayerScript : MonoBehaviour {
 
 	public bool NewHighScore() {
 		bool ret = false;
-		Text scoreText = GameObject.Find("/Canvas/Panel/Score").GetComponent<Text>();
+		Text scoreText = GameObject.Find("/UI/Canvas/Panel/Score").GetComponent<Text>();
 		int score = int.Parse(scoreText.text);
 		int score5 = PlayerPrefs.GetInt("Player Score 5");
 		Debug.Log("score: " + score5  + " < " + score);

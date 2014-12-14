@@ -34,6 +34,7 @@ public class AirplaneScript : MonoBehaviour {
 			Destroy(gameObject); 
 			Destroy(expl, 3);
 			col.gameObject.GetComponent<DiePlayerScript>().Die();
+			Destroy(col.gameObject);
 			
 		} else {
 			right = !right;
