@@ -85,7 +85,6 @@ public class MovementScript : MonoBehaviour {
 				controller.animation.CrossFade("jump");
 			}
 		}
-		Debug.Log ("speed player " + speed);
 		moveDirection.y -= gravity * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
 		//controller.transform.rigidbody.AddForce(transform.forward * speed * Time.deltaTime, ForceMode.Acceleration);
