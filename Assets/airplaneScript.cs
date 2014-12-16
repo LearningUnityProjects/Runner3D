@@ -26,7 +26,7 @@ public class spiderController : MonoBehaviour {
 	}
 	
 	
-	void OnControllerColliderHit(ControllerColliderHit hit) {
+	void OnTriggerEnter(ControllerColliderHit hit) {
 		CharacterController controller = GetComponent<CharacterController>();
 		if (hit.gameObject.name == "WALL") {
 			controller.transform.Rotate(new Vector3(0,180,0));
