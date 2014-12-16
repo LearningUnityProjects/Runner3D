@@ -13,15 +13,18 @@ public class MovementScript : MonoBehaviour {
 	private bool isCrouching;
 	private bool isJumping;
 	private bool isSprinting;
+	private float initY;
+	private CharacterController controller;
 
 	void Start(){
-		CharacterController controller = GetComponent<CharacterController>();
+		controller = GetComponent<CharacterController>();
 		xPosition = controller.transform.position.x;
 		controller.animation.CrossFade ("run");
 		lane = 0;
 		speed = initSpeed;
 		isCrouching = false;
 		isSprinting = false;
+		initY = controller.transform.position.y;
 	}
 
 	void Update() {
@@ -50,9 +53,13 @@ public class MovementScript : MonoBehaviour {
 			}
 			if(Input.GetKeyDown("j")){
 				isCrouching = true;
+				controller.height = 1;
+				controller.center = new Vector3(0,0.5f,0);
 			}	
 			if(Input.GetKeyUp("j")){
 				isCrouching = false;
+				controller.height = 2;
+				controller.center = new Vector3(0,1,0);
 			}
 		}
 

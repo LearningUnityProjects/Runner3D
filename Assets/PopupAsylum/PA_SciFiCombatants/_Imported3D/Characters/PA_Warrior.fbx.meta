@@ -68,7 +68,7 @@ ModelImporter:
     400060: swarmWarriorRtRearLeg4
     400062: swarmWarriorRtRearLeg5
     4300000: PA_Warrior
-    7400000: PA_WarriorForward_Clip
+    7400000: walk
     7400002: PA_WarriorBackward_Clip
     7400004: PA_WarriorLeft_Clip
     7400006: PA_WarriorRight_Clip
@@ -97,7 +97,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: PA_WarriorForward_Clip
+      name: walk
       takeName: Take 001
       firstFrame: 1
       lastFrame: 20
