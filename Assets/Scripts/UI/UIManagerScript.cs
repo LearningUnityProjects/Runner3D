@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class UIManagerScript : MonoBehaviour {
 
-	public InputField name;
+	public InputField inputName;
 	public GameObject retryPanel;
 	public GameObject highScorePanel;
 
@@ -32,8 +32,8 @@ public class UIManagerScript : MonoBehaviour {
 	{
 		Text scoreText = GameObject.Find("/UI/Canvas/Panel/Score").GetComponent<Text>();
 		int score = int.Parse(scoreText.text);
-		Debug.Log ("input field " + name.value); 
-		gameObject.GetComponent<SaveScoreScript>().UpdateHighScore(score,name.value);
+		//Debug.Log ("input field " + inputName.value); 
+		gameObject.GetComponent<SaveScoreScript> ().UpdateHighScore (score, "proba");//inputName.value);
 		highScorePanel.SetActive(false);
 		retryPanel.SetActive(true);
 	}

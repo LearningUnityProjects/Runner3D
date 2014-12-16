@@ -7,7 +7,7 @@ public class MovementScript : MonoBehaviour {
 	public float gravity = 20.0F;
 
 	private Vector3 moveDirection = Vector3.zero;
-	private float speed;
+	public float speed { get; set; }
 	private float xPosition;
 	private int lane;
 	private bool isCrouching;
