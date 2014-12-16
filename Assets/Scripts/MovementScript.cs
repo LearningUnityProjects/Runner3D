@@ -29,7 +29,7 @@ public class MovementScript : MonoBehaviour {
 		Vector3 pos = controller.transform.position;
 		pos.x = Mathf.MoveTowards(pos.x, xPosition, 15.0F * Time.deltaTime);
 		controller.transform.position = pos;
-
+		if (speed < 25.0f) speed += Time.deltaTime*0.5f;
 		if (!isJumping) {
 			if (Input.GetKeyDown (KeyCode.LeftShift)) {
 				speed = initSpeed * 2;
@@ -85,6 +85,7 @@ public class MovementScript : MonoBehaviour {
 				controller.animation.CrossFade("jump");
 			}
 		}
+		Debug.Log ("speed player " + speed);
 		moveDirection.y -= gravity * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
 		//controller.transform.rigidbody.AddForce(transform.forward * speed * Time.deltaTime, ForceMode.Acceleration);
