@@ -33,7 +33,7 @@ public class UIManagerScript : MonoBehaviour {
 		Text scoreText = GameObject.Find("/UI/Canvas/Panel/Score").GetComponent<Text>();
 		int score = int.Parse(scoreText.text);
 		//Debug.Log ("input field " + inputName.value); 
-		gameObject.GetComponent<SaveScoreScript> ().UpdateHighScore (score, "proba");//inputName.value);
+		gameObject.GetComponent<SaveScoreScript> ().UpdateHighScore (score, inputName.value);
 		highScorePanel.SetActive(false);
 		retryPanel.SetActive(true);
 	}
