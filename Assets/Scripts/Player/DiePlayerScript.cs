@@ -6,6 +6,7 @@ public class DiePlayerScript : MonoBehaviour {
 
 	public GameObject retryDialog;
 	public GameObject highScoreDialog;
+	public GameObject panel;
 
 	public bool NewHighScore() {
 		bool ret = false;
@@ -20,12 +21,14 @@ public class DiePlayerScript : MonoBehaviour {
 	}
 
 	public void Die() {
+		panel.SetActive (true);
 		if (NewHighScore()) highScoreDialog.SetActive(true);
 		else retryDialog.SetActive(true);
 	}
 
 	// Use this for initialization
 	void Start () {
+		panel.SetActive (false);
 		retryDialog.SetActive(false);
 		highScoreDialog.SetActive(false);
 	}

@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour {
 
 	public GameObject retryDialog;
 	public GameObject highScoreDialog;
+	public GameObject panel;
 	public float maxTime = 5.0f;
 
 	public bool god { get; set;}
@@ -26,6 +27,7 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	public void Die() {
+		panel.SetActive (true);
 		if (NewHighScore()) highScoreDialog.SetActive(true);
 		else retryDialog.SetActive(true);
 	}
@@ -35,6 +37,7 @@ public class PlayerScript : MonoBehaviour {
 	void Start () {
 		god = false;
 		godParticles = transform.FindChild ("god").gameObject;
+		panel.SetActive (false);
 		retryDialog.SetActive(false);
 		highScoreDialog.SetActive(false);
 	}
