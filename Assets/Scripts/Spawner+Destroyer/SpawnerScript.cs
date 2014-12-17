@@ -21,7 +21,7 @@ public class SpawnerScript : MonoBehaviour {
 	void Spawn() {
 		for (int i = 0; i < numberOfPlatformsToInvoke; ++i) {
 			z += platformSize;
-			if (z > 150.0f) {
+			if (z > 600.0f) {
 					int range = Random.Range (0, obj2.Length);
 				if (firstDoor) {
 					Debug.Log ("z1: " + z);

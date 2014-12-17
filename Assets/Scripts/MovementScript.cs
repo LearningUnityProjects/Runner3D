@@ -36,7 +36,7 @@ public class MovementScript : MonoBehaviour {
 		Vector3 pos = controller.transform.position;
 		pos.x = Mathf.MoveTowards(pos.x, xPosition, 15.0F * Time.deltaTime);
 		controller.transform.position = pos;
-		if (speed < 25.0f) speed += Time.deltaTime*0.5f;
+		if (speed < 25.0f) speed += Time.deltaTime*0.1f;
 		if (!isJumping) {
 			if (Input.GetKeyDown (KeyCode.LeftShift) || startSprint) {
 				initSpeed = speed;
