@@ -6,7 +6,6 @@ public class DiePlayerScript : MonoBehaviour {
 
 	public GameObject retryDialog;
 	public GameObject highScoreDialog;
-	public AudioSource exp;
 
 	public bool NewHighScore() {
 		bool ret = false;
@@ -21,10 +20,8 @@ public class DiePlayerScript : MonoBehaviour {
 	}
 
 	public void Die() {
-		exp.Play ();
 		if (NewHighScore()) highScoreDialog.SetActive(true);
 		else retryDialog.SetActive(true);
-
 	}
 
 	// Use this for initialization
