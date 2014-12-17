@@ -10,7 +10,7 @@ public class SpawnerScript : MonoBehaviour {
 	public float z = -5.0f;
 	public int numberOfPlatformsToInvoke = 4;
 	
-	public float zLevel2 = 600.0f;
+	public float zLevel2 = 100.0f;
 	private bool firstDoor;
 
 	// Use this for initialization
@@ -27,7 +27,7 @@ public class SpawnerScript : MonoBehaviour {
 				if (firstDoor) {
 					Debug.Log ("z1: " + z);
 					float aux = z;
-					//aux += platformSize/4;
+					//aux -= platformSize/2;
 					Debug.Log ("Instantiate door at: " + aux);
 					//Instantiate (door, new Vector3 (transform.position.x, transform.position.y, aux-platformSize/2), door.transform.rotation);
 					Instantiate (obj2 [range], new Vector3 (transform.position.x, transform.position.y, aux), obj2 [range].transform.rotation);

@@ -466,7 +466,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 5e91ea33eb2cc87408c2e409a6990a7a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6983,12 +6983,12 @@ MonoBehaviour:
   - {fileID: 133278, guid: de21bec786dab894fb5362a21743aaaf, type: 2}
   - {fileID: 113988, guid: 596c830c99bcb4d4da34b58b749e9b91, type: 2}
   obj2:
-  - {fileID: 154590, guid: b8b022a3c22a7234fb6853bf564ceb95, type: 2}
+  - {fileID: 100060, guid: b8b022a3c22a7234fb6853bf564ceb95, type: 2}
   door: {fileID: 119410, guid: 6d1a38fb46219234b8e43ad048b18a7f, type: 2}
   platformSize: 35
   z: -5
   numberOfPlatformsToInvoke: 4
-  zLevel2: 600
+  zLevel2: 100
 --- !u!4 &2084041153
 Transform:
   m_ObjectHideFlags: 0
