@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MovementScript : MonoBehaviour {
 	public float initSpeed = 12.0f;
-	public float jumpSpeed = 18.0F;
+	public float jumpSpeed = 25.0F;
 	public float gravity = 20.0F;
 
 	private Vector3 moveDirection = Vector3.zero;

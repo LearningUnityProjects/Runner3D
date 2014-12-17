@@ -267,6 +267,7 @@ GameObject:
   - 33: {fileID: 3300000}
   - 136: {fileID: 13600000}
   - 23: {fileID: 2300000}
+  - 114: {fileID: 11459572}
   m_Layer: 0
   m_Name: LASER
   m_TagString: Untagged
@@ -1061,7 +1062,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100032}
   m_LocalRotation: {x: .499999404, y: -.500000656, z: -.499999404, w: .500000656}
-  m_LocalPosition: {x: -.179560006, y: 3.35750008, z: -.0789289996}
+  m_LocalPosition: {x: -.179560006, y: 3, z: -.0789289996}
   m_LocalScale: {x: .0110390531, y: .59538126, z: .000315401354}
   m_Children:
   - {fileID: 400030}
@@ -3128,6 +3129,18 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11459572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9a699a22112da4990d3689d529007c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosio: {fileID: 100000, guid: 8e1dcf1924b1945fcaab73df0affd2ab, type: 2}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
