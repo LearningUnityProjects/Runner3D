@@ -44,6 +44,9 @@ public class PlayerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyDown (KeyCode.Keypad2)) {
+			god = true;
+		} 
 		if (god) {
 			if (godTime == 0.0f) {
 				transform.GetComponent<MovementScript> ().stopSprint = false;
@@ -53,7 +56,7 @@ public class PlayerScript : MonoBehaviour {
 			}
 						Debug.Log ("I'm on god mode");
 						godTime += Time.deltaTime;
-						if (godTime >= maxTime) {
+						if (godTime >= maxTime && !(Input.GetKeyDown (KeyCode.Keypad2))) {
 								transform.GetComponent<MovementScript> ().stopSprint = true;
 								transform.GetComponent<MovementScript> ().startSprint = false;
 								godTime = 0.0f;
