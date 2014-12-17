@@ -16,6 +16,10 @@ public class MovementScript : MonoBehaviour {
 	private float initY;
 	private CharacterController controller;
 
+	public bool startSprint { get; set;}
+	public bool stopSprint { get; set;}
+
+
 	void Start(){
 		controller = GetComponent<CharacterController>();
 		xPosition = controller.transform.position.x;
@@ -34,7 +38,8 @@ public class MovementScript : MonoBehaviour {
 		controller.transform.position = pos;
 		if (speed < 25.0f) speed += Time.deltaTime*0.5f;
 		if (!isJumping) {
-			if (Input.GetKeyDown (KeyCode.LeftShift)) {
+			if (Input.GetKeyDown (KeyCode.LeftShift) || startSprint) {
+				initSpeed = speed;
 				speed = initSpeed * 2;
 				isSprinting = true;
 			}
@@ -63,7 +68,7 @@ public class MovementScript : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetKeyUp (KeyCode.LeftShift)) {
+		if (Input.GetKeyUp (KeyCode.LeftShift) || stopSprint) {
 			speed = initSpeed;	
 			isSprinting = false;
 		}

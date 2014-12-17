@@ -6,8 +6,12 @@ public class PlayerScript : MonoBehaviour {
 
 	public GameObject retryDialog;
 	public GameObject highScoreDialog;
+	public float maxTime = 5.0f;
 
 	public bool god { get; set;}
+
+	private float godTime = 0.0f;
+	private GameObject godParticles;
 
 	public bool NewHighScore() {
 		bool ret = false;
@@ -25,16 +29,39 @@ public class PlayerScript : MonoBehaviour {
 		if (NewHighScore()) highScoreDialog.SetActive(true);
 		else retryDialog.SetActive(true);
 	}
+	
 
 	// Use this for initialization
 	void Start () {
-		god = true;
+		god = false;
+		godParticles = transform.FindChild ("god").gameObject;
 		retryDialog.SetActive(false);
 		highScoreDialog.SetActive(false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (god) {
+			if (godTime == 0.0f) {
+				transform.GetComponent<MovementScript> ().stopSprint = false;
+				transform.GetComponent<MovementScript> ().startSprint = true;
+			} else {
+				transform.GetComponent<MovementScript> ().startSprint = false;
+			}
+						Debug.Log ("I'm on god mode");
+						godTime += Time.deltaTime;
+						if (godTime >= maxTime) {
+								transform.GetComponent<MovementScript> ().stopSprint = true;
+								transform.GetComponent<MovementScript> ().startSprint = false;
+								godTime = 0.0f;
+								god = false;
+								Debug.Log ("Now I'm a simple mortal");
+						} else {
+							transform.GetComponent<MovementScript> ().stopSprint = false;
+						}
+				} else {
+			Debug.Log ("Now I'm a simple mortal");		
+		}
+		godParticles.SetActive (god);
 	}
 }
