@@ -9,13 +9,12 @@ public class spiderRobotScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		moveDirection = new Vector3 (0, 0, -1);
-		speed = 1/2;
+		speed = 7;
 		controller = GetComponent<CharacterController> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		controller.animation.Play("walk");
-		controller.Move (moveDirection * speed);
+		controller.Move (moveDirection * speed * Time.deltaTime);
 	}
 }
