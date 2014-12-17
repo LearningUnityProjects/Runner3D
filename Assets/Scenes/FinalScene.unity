@@ -5701,7 +5701,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj:
-  - {fileID: 100064, guid: 74804dad41ea849a8b8072984afc787e, type: 2}
+  - {fileID: 100070, guid: f654ba3f4b99741409e976f92fe8c54b, type: 2}
+  - {fileID: 141612, guid: ff46d84121205044cb16b7f68dc7e138, type: 2}
+  - {fileID: 100102, guid: 852c2b25e24284007a21675768b45ae6, type: 2}
   obj2:
   - {fileID: 100048, guid: c3586b97cfaa44c249f155ff6d9cf78b, type: 2}
   door: {fileID: 119410, guid: 6d1a38fb46219234b8e43ad048b18a7f, type: 2}

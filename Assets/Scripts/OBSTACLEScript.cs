@@ -18,7 +18,7 @@ public class OBSTACLEScript : MonoBehaviour {
 		if (col.gameObject.name == "baseMale") {
 			Debug.Log ("HE PICAT AMB EL TIU");
 			Destroy(gameObject); 
-			col.gameObject.GetComponent<DiePlayerScript>().Die();
+			col.gameObject.GetComponent<PlayerScript>().Die();
 			Destroy(col.gameObject);
 			
 		} 

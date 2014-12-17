@@ -2,10 +2,12 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class DiePlayerScript : MonoBehaviour {
+public class PlayerScript : MonoBehaviour {
 
 	public GameObject retryDialog;
 	public GameObject highScoreDialog;
+
+	public bool god { get; set;}
 
 	public bool NewHighScore() {
 		bool ret = false;
@@ -26,6 +28,7 @@ public class DiePlayerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		god = true;
 		retryDialog.SetActive(false);
 		highScoreDialog.SetActive(false);
 	}
