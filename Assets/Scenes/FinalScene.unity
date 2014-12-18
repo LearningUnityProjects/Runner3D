@@ -7001,7 +7001,7 @@ MonoBehaviour:
   platformSize: 35
   z: -5
   numberOfPlatformsToInvoke: 4
-  zLevel2: 100
+  zLevel2: 200
 --- !u!4 &2084041153
 Transform:
   m_ObjectHideFlags: 0

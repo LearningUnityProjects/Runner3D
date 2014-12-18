@@ -27,7 +27,7 @@ public class SpawnerScript : MonoBehaviour {
 				if (firstDoor) {
 					Debug.Log ("z1: " + z);
 					float aux = z;
-					aux += platformSize/2;
+					aux += platformSize/4;
 					Debug.Log ("Instantiate door at: " + aux);
 					//Instantiate (door, new Vector3 (transform.position.x, transform.position.y, aux-platformSize/2), door.transform.rotation);
 					Instantiate (obj2 [range], new Vector3 (transform.position.x, transform.position.y, aux), obj2 [range].transform.rotation);
