@@ -1,6 +1,6 @@
 <h1>Mazas Runner</h1>
 
-Videogame project for VJ subject at FIB - Universitat Politécnica de Barcelona.
+Videogame project for VJ subject at FIB - Universitat Politécnica de Barcelona, done with Unity.
 
 Video url: https://www.youtube.com/watch?v=-Er7SdEDnMc
 
